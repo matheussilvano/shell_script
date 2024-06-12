@@ -1,0 +1,91 @@
+## Shell Script ##
+
+- É uma sequência lógica de comandos e instruções no Shell
+- Além dos comandos, são utilizadas: Variáveis, instruções lógicas e condicionais
+
+## Função ##
+
+- Automatizar e agilizar atividades
+- Podem ser agendados na cron
+- Cria ferramentas para auxiliar no serviço
+- Aumento na produtividade
+
+## O Shell ##
+
+- É a interface entre o usuário e o sistema Linux
+- É um interpretador de instruções
+- Hardware > Kernel > Shell > Usuário
+
+## Tipos de Shell ##
+
+Bourne Shell (sh): Shell original e padrão do Unix
+Bourne-Again Shell (bash): Shell padrão no Linux com melhorias
+Korn Shell (ksh): Também é uma melhoria do bourne shell
+C Shell (csh): Traz para o shell recursos na linguagem C
+OBS: echo $0 mostra o shell utilizado
+
+## Comandos mais utilizados ##
+
+  # COMANDO CD #
+    cd [nome-do-diretório]
+     . -> Diretório atual
+     .. ou - -> Diretório anterior
+     ~ -> Diretório home do usuário
+     / -> Diretório Raiz
+
+  ## COMANDO LS ##
+   ls -[opcoes] [argumento]
+    -l  detalhado
+    -t  ordem cronológica (caso não utilize, fica em ordem alfabética)
+    -r  ordem inversa
+    -a  lista todos os arquivos (inclusive ocultos)
+
+  ## COMANDO PS ##
+   ps axu
+    - Mostra todos os processos realizados
+
+  ## COMANDO TOUCH ##
+   touch [nome_do_arquivo]
+    - Cria um arquivo zerado (sem conteúdo)
+    - Se for utilizado em um arquivo já existente, altera-se apenas o horário de modificação
+
+
+  ## COMANDO HELP ##
+  [comando] --help
+    - Informa tudo que pode ser utilizado em um comando
+
+  ## COMANDO ECHO ##
+   echo [argumento]
+    - Mostra o argumento desejado na saída
+    -n não quebra a linha
+    -e reconhce comandos utilizando \
+
+  ## COMANDO MKDIR ##
+   mkdir -[opcao] [nome_do_diretorio]
+    - Cria um diretório
+    -p Cria toda a árvore do diretório (ex: mkdir -p diretorio1/diretorio2)
+
+  ## COMANDO RM ##
+   rm -[opcao] [nome_do_arquivo]
+    - Remove por padrão apenas arquivos
+    -r Remove diretórios (para diretórios vazios, pode-se usar rmdir)
+    -f Não exibe mensagem de erro
+    -v Mostra os arquivos apagados
+
+  ## COMANDO SLEEP ##
+   sleep [n]
+    - Conta um tempo n em segundos para a próxima execução
+
+    
+    
+
+
+    
+
+
+
+
+
+     
+
+  
