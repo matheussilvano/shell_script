@@ -76,6 +76,91 @@ OBS: echo $0 mostra o shell utilizado
    sleep [n]
     - Conta um tempo n em segundos para a próxima execução
 
+  ## COMANDO CAT ##
+   cat [arquivo]
+    - Imprime o conteúdo do arquivo
+    -b enumera as linhas com conteúdo
+    -n enumera todas as linhas
+    -A demonstra os caracteres especiais(tabulações)
+
+  ## COMANDO TAC ##
+   tac [arquivo]
+    - Possui a mesma função do CAT, porém lê os arquivos debaixo para cima
+
+  ## COMANDO TAIL ##
+   tail -n[n] [arquivo]
+    - Mostra as últimas [n] linhas do arquivo
+
+  ## COMANDO HEAD ##
+   head -n[n] [arquivo]
+    - Mostra as [n] primeiras linhas do arquivo
+    - o -n pode ser trocado por -c para mostrar os primeiros [n] caracteres
+
+  ## COMANDO WC ##
+   wc -[opcao] [arquivo]
+    - Mostra a quantidade da informação desejada
+    -l linhas
+    -w palavras
+    -m caracteres
+    -c bytes (normalmente é o mesmo número de caracteres)
+
+  ## PIPE (|) ##
+   [comando1] |[comando2]
+    - Usa a saída do primeiro comando como entrada para o segundo
+    - Ex: tail -n5 [arquivo] |wc -w (contará o número de caracteres das 5 últimas linhas do arquivo)
+
+  ## COMANDO SORT ##
+   sort [arquivo]
+    - Ordena um arquivo em ordem alfabética/numérica
+    - sort -r ordena inversamente
+    - sort -k[n] utiliza [n] como o índice de ordenação (Ex: Em uma lista com nomes e sobrenomes sort -k2 ordenaria pelos sobrenomes)
+    - -t"[delimitador]" informa qual o delimitador dos campos
+    - -g é utilizado para ordenar números
+
+  ## COMANDO UNIQ ##
+   uniq [arquivo]
+    - Retira informações repetidas que estiverem ordenadas
+    - Pode ser misturado com o sort para um melhor funcionamento (sort [arquivo] |uniq
+    - -u exclui tudo o que estiver repetido
+    - -d mostra apenas o que foi repetido
+    - -c mostra quantas vezes a informação foi repetida
+
+  ## COMANDO TR ##
+   cat [arquivo] |tr [caractere1] [caractere2]
+    - Troca todos os caracteres 1 por caracteres 2
+    - a-z A-Z troca tudo o que for minúsculo por maiúsculo
+    - se não for utilizado nenhum caractere2, o caractere1 é deletado
+
+  ## COMANDO CUT ##
+    cat [arquivo] | cut -[opcao][n]
+      - Corta itens desejados
+      - -c corta caracteres
+      - -f corta campos inteiros (palavras)
+      - [n]- corta tudo que estiver após esse número
+
+  ## COMANDO DIFF ##
+   diff [arquivo1] [arquivo2]
+    - Mostra a diferença entre dois arquivos
+    - -w mostra apenas diferenças de conteúdo (sem contar espaços ou tabulações)
+    - -r mostra a diferença entre diretórios
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
     
     
 
