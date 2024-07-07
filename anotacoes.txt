@@ -209,41 +209,78 @@ OBS: echo $0 mostra o shell utilizado
   - Ex: ls -l arquivo.txt > log.out 2> log-erro.out (caso dê certo irá para log.out, caso haja erro, irá para log-erro.out)
   - 2>&1 redireciona o erro para a mesma pasta da saída comum
   - /dev/null é o "buraco negro" das saídas, pode ser usado para ocultar mensagens de erro
+  - tr mostra o que foi realizado na entrada
 
+## Variáveis ##
+  - Podem ser achadas no comando env (ou set, que também reconhece as variáveis não exportadas)
+  - É um nome que armaneza um valor
+  - $ é utilizado para "chamar" uma variável
+  - Variáveis devem começar com letras (normalmente maiúsculas) ou "_"
+  - Para declarar uma variável basta fazer: VARIAVEL1=Valor
+  - Para criar uma variável com espaços/tabulações, deve ser protegida com ""
+  - Quando uma variável é declarada, ela não é gravada. Caso o shell seja fechado, a variável será excluída
+  - export é usado para que os processos filhos do processo incial também reconheçam a variável
+  - a variável pode ser dada por um comando, utilizado crases HORA=`date +%H`, ou também pode ser utilizado por meio da junção de $ e parênteses MINUTO=$(date +%M)
 
+## Uso das aspas ##
+  - São usadas principalmente para proteger caracteres especiais
+  - "" -> protege todos os caracteres com excessão de: $ ` /
+  - '' -> protege TODOS os caracteres
 
+## O VI ##
+ vi [arquivo]
+  - Entra por padrão no modo de navegação
+  - digitando i, entra no modo de inserção (s volta)
+  - : entra em modo de comando
+  - :1 vai para a primeira linha do arquivo
+  - :$ vai para a última linha do arquivo
+  - :[n] vai para a linha n
+  - :![comando] faz um comando no bash e volta para o VI
+  - / busca pelo item desejado (n para o próximo)
+  - d[n]d recorta o número n de linhas após a que o cursor estiver
+  - p cola 
+  - y[n]y copia o número n de linhas após a que o cursor estiver
+  - https://www.smashingmagazine.com/2010/05/vi-editor-linux-terminal-cheat-sheet-pdf/
+  - :w salva
+  - :wq ou :x salva e sai do arquivo
+  - :q! sai do arquivo sem salvar
 
-    
-    
-    
-    
-    
-      
+## File Globbing ##
+  - Utilização de caracteres especiais para realizar ações desejadas
+  - * Seleciona tudo o que estiver antes ou depois do que for desejado (ex: ls aula*)
+  - [] Busca somente os caracteres desejados, contando apenas um caractere por vez, (ex: ls aula[123])
+  - {} Busca somente as palavras desejadas (ex: ls {AULA,aula,Aula}1)
+  - ? Considera o número de ? como caracteres qualquer (ex: ls aula1? -> considera da aula 10 à 19)
+  
 
+## REGEX (Expressões regulares) ##
+  - Utilização de caracteres especiais para criação de um padrão de texto
 
-
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-    
-
-
-    
-
-
-
-
-
-     
 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
