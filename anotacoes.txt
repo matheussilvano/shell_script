@@ -252,9 +252,30 @@ OBS: echo $0 mostra o shell utilizado
   - {} Busca somente as palavras desejadas (ex: ls {AULA,aula,Aula}1)
   - ? Considera o número de ? como caracteres qualquer (ex: ls aula1? -> considera da aula 10 à 19)
   
-
 ## REGEX (Expressões regulares) ##
   - Utilização de caracteres especiais para criação de um padrão de texto
+  - egrep: é um grep que aceita mais expressões regulares
+  - [] Busca caracteres desejados (ex: egrep "[Ll]inux" arquivo.txt)
+  - ^ motra o conteúdo apenas se for o primeiro da linha (ex: egrep "^linux" arquivo.txt)
+  - $ mostra apenas o conteúdo que estiver no final da linha (ex: egrep "linux$" arquivo.txt)
+  - * o caractere anterior pode ou não aparecer (ex: egrep "b[a-i]g*" arquivo.txt também buscaria ba)
+  - + Mostra apenas quando o caractere anterior pode aparecer uma ou mais vezes
+  - ? O caractere anterior pode aparecer uma ou nenhuma vez
+  - . Faz a função do ? no File Globbing
+  - .* procura qualquer informação entre duas palavras
+
+## Criação de um script ##
+  - para a criação de um arquivo usa-se vi
+  - a extensão utilizada por padrão é .sh
+  - é ideal manter um padrão de letras maiúsculas, minúsculas e underlines
+  - a primeira linha do script é a indicação de qual interpretador será utilizado (#!/bin/bash)
+  
+  
+
+  
+
+  
+
 
 
   
