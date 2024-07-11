@@ -1,3 +1,20 @@
+## Para a Nexxera ##
+
+Pesquisa em todas as caixas postais:
+find ~/OPERADORAS.SEMRELACIONAMENTO/sent ~/.QUARENTENA/mailbox ~/CIELO.SEMPV/sent ~/ALELO.SEMPV/sent ~/POLICARD.SEMRELACIONAMENTO ~/TICKET.SEMRELACIONAMENTO -type f -name '*112211580001*' -exec ls -ltr {} \;
+
+Liberação de arquivos em massa:
+for cnpj in 1027160880 2888608426; do
+    for i in ~/CIELO.SEMPV/sent/*$cnpj*; do
+        mv -v $i /var/spool/nexxera/skyline/recebe/ident/$(basename $i | cut -f1 -d\$);
+       sleep 1;
+    done;
+done;
+
+Procura CNPJ em arquivo:
+sed -n 's/.*CV0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/biq_0026441_20240708_000392.txt*
+
+
 ## Shell Script ##
 
 - É uma sequência lógica de comandos e instruções no Shell
