@@ -49,6 +49,7 @@ OBS: echo $0 mostra o shell utilizado
      .. ou - -> Diretório anterior
      ~ -> Diretório home do usuário
      / -> Diretório Raiz
+     - -> Volta pro diretório anterior
 
   ## COMANDO LS ##
    ls -[opcoes] [argumento]
