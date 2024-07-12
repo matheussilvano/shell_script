@@ -1,5 +1,35 @@
 ## Para a Nexxera ##
 
+Compactar/Descompactar arquivos
+
+COMPACTAR: zip [nome_do_arquivo.zip]
+DESCOMPACTAR (ZIP): unzip [nome_do_arquivo.zip]
+DESCOMPACTAR (GZ): [nome_do_arquivo.gz]
+
+Saber os processos que rodam na cron
+
+crontab | grep bankweb
+
+Visualizar o conteúdo do arquivo
+
+less [arquivo]
+
+Logar com outro usuário
+
+su - [usuario]
+
+Mover ou renomear arquivo
+
+RENOMEAR: mv [arquivo] [novo_nome_do_arquivo]
+MOVER: mv [arquivo] [destino]
+
+
+Alterar permissões de pastas e arquivos:
+
+chmod 777 [arquivo] ou [pasta]
+Obs.: 4 = Leitura, 2 = Escrita, 1 = Execução.
+A primeira casa é referente as permissões do usuário dono do arquivo, a segunda casa é referente as permissões do grupo de usuários e a terceira casa é referente as permissões dos outros usuários.
+
 Pesquisa em todas as caixas postais:
 find ~/OPERADORAS.SEMRELACIONAMENTO/sent ~/.QUARENTENA/mailbox ~/CIELO.SEMPV/sent ~/ALELO.SEMPV/sent ~/POLICARD.SEMRELACIONAMENTO ~/TICKET.SEMRELACIONAMENTO -type f -name '*112211580001*' -exec ls -ltr {} \;
 
