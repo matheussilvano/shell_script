@@ -319,6 +319,7 @@ OBS: echo $0 mostra o shell utilizado
   - a extensão utilizada por padrão é .sh
   - é ideal manter um padrão de letras maiúsculas, minúsculas e underlines
   - a primeira linha do script é a indicação de qual interpretador será utilizado (#!/bin/bash)
+  - $PATH -> São os diretórios padrões, onde não precisam de caminho (~/) para serem executados
   
   
 
