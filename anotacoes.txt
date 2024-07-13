@@ -347,6 +347,13 @@ OBS: echo $0 mostra o shell utilizado
 
         sort ../diretorio/arquivo # Caminho do arquivo para tal coisa
 
+  - Váriáveis
+    - São utilizadas para deixar o código mais legivel e para armazenar informações que possam ser alteradas futuramente
+    - DATAHORA=$(date +%H:%M)
+    - Usa-se o $ apenas para chamar a variável, não para declará-la
+    
+
+
     
 
     
