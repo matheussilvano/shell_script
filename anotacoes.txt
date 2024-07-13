@@ -79,9 +79,8 @@ OBS: echo $0 mostra o shell utilizado
     cd [nome-do-diretório]
      . -> Diretório atual
      .. ou - -> Diretório anterior
-     ~ -> Diretório home do usuário
+     ~ ou -- -> Diretório home do usuário
      / -> Diretório Raiz
-     - -> Volta pro diretório anterior
 
   ## COMANDO LS ##
    ls -[opcoes] [argumento]
@@ -320,6 +319,39 @@ OBS: echo $0 mostra o shell utilizado
   - é ideal manter um padrão de letras maiúsculas, minúsculas e underlines
   - a primeira linha do script é a indicação de qual interpretador será utilizado (#!/bin/bash)
   - $PATH -> São os diretórios padrões, onde não precisam de caminho (~/) para serem executados
+  - Para adicionar um diretório no PATH, usa-se PATH="$PATH:/home/diretório" (apenas no shell local)
+  - Para ver tudo o que estiver no PATH, usa-se echo $PATH
+  - Para adicionar definitivamente um diretório no PATH, usa-se vi ~/.profile e adiciona-se o que for desejado.
+  - Comentários: Existe um padrão de comentário a ser feito (Começando sempre com #)
+    - 1. Cabeçalho: Mostra a função do Script, quem criou, quando foi criado e alterações:
+        #############################################
+        #
+        # NomeDoScript.sh - Script para fazer tal coisa
+        #
+        # Autor: Matheus Silvano (email@dominio.com)
+        # Data Criação: 30/02/2024
+        #
+        # Descrição: Faz não sei o que, com o objetivo de não sei o que lá
+        #
+        # Exemplo de uso: ./NomeDoScript.sh
+        #
+        # Alterações
+        #    Dia X - Inclusão do não sei o que
+        #    Dia Y - Correção do bug tal
+        #
+        #######################################################
+
+    - 2. Antes ou depois de cada função
+        # Função de leitura de data e hora
+        (código)
+
+        sort ../diretorio/arquivo # Caminho do arquivo para tal coisa
+
+    
+
+    
+
+        
   
   
 
