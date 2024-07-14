@@ -21,3 +21,33 @@
 
 NomeMaquina=uname
 DataHoraAtual=date
+HoraMaquinaAtiva=uptime -s
+VersaoKernel=uname -a | awk '{print $3}'
+QuantidadeCpus=grep 'cpu cores' /proc/cpuinfo | awk -F': ' '{print $2}' | uniq
+ModeloCpu=grep 'model name' /proc/cpuinfo | awk -F': ' '{print $2}' | uniq
+RamDisponivel=grep 'MemFree' /proc/meminfo | awk -F': ' '{print $2}' | uniq
+Particoes=df
+
+echo =========================================
+echo Relatorio da Maquina: $NomeMaquina
+echo Data/Hora: $DataHoraAtual
+echo =========================================
+echo " "
+echo Maquina ativa desde: $HoraMaquinaAtiva
+echo " "
+echo "Versao do Kernel: $VersaoKernel"
+echo " "
+echo CPUs:
+echo Quantidade de CPUs/Core: $QuantidadeCpus
+echo Modelo da CPU: $ModeloCpu
+echo " "
+echo Memoria total: $RamDisponivel
+echo " "
+echo Particoes:
+echo $Particoes
+
+
+
+
+
+
