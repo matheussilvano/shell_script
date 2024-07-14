@@ -351,6 +351,19 @@ OBS: echo $0 mostra o shell utilizado
     - São utilizadas para deixar o código mais legivel e para armazenar informações que possam ser alteradas futuramente
     - DATAHORA=$(date +%H:%M)
     - Usa-se o $ apenas para chamar a variável, não para declará-la
+
+  ## Exit codes ##
+    - São os códigos de saída rodados ao final de um script, indo de 0 à 255
+    - 0 = sucesso
+    - Qualquer coisa diferente de 0 significa um erro
+    - echo $? retorna o código de saída do comando anterior
+    - Normalmente os erros são 1 ou 2
+    - man [comando] informa os exit codes de um comando e o que signficam
+    - o comando exit pode ser usado para sair de um script sem rodar o que estiver após ele 
+    - exit [n] -> para o processo e usa o número [n] como exit code
+    
+    
+    
     
 
 
