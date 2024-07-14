@@ -20,5 +20,5 @@ read VALOR1
 echo -n Insira o segundo valor:
 read VALOR2
 
-SOMA= $VALOR1 + $VALOR2
+SOMA=$((VALOR1 + VALOR2))
 echo O valor da soma é: $SOMA
