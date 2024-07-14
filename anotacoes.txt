@@ -368,6 +368,9 @@ OBS: echo $0 mostra o shell utilizado
     - Caso as variáveis sejam inseridas juntas, separadas por espaços, a resposta será dividida da mesma forma. Ex: read VAR1 VAR2 VAR3 -> entrada: Curso Shell Script -> $VAR1 = Curso, $VAR2 = Shell, $VAR3 = Script
     - Caso existam menos variáveis que palavras, a primeira váriavel irá capturar a primeira palavra e a segunda variável irá capturar o restante da frase
     - Sempre pode ser usado read --help para descobrir todas as funcionalidades
+    - -p -> Informa algo para a entrada. Ex: read -p "Informe o CNPJ: " CNPJ
+    - -s -> Não aparece no prompt (ideal para senhas)
+    
     
     
     
