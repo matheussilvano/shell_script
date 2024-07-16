@@ -42,7 +42,7 @@ for cnpj in 56158777001962 56158777001024 56158777002268; do
 done;
 
 Procura CNPJ em arquivo:
-sed -n 's/.*CV0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/*VR_NXX_TAKADAETAKATA* | uniq
+sed -n 's/.*CV0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/*ANALISUPERMERCADO* | uniq
 
 Copiar retornos de outra caixa postal (manager):
 /home/skyline/scripts/generico/multiScripts.sh generico/Generico_Copia_Retornos.sh,&F,BRASILOR.LUXOTTICA
