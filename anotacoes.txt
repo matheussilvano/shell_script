@@ -47,6 +47,11 @@ sed -n 's/.*CV0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/*VR_NXX_CORCOVADOBU
 Copiar retornos de outra caixa postal (manager):
 /home/skyline/scripts/generico/multiScripts.sh generico/Generico_Copia_Retornos.sh,&F,BRASILOR.LUXOTTICA
 
+Editar Mapa Sodexo:
+cd ~/scripts/sodexho/
+cp -pv Mapa_Clientes_Sodexo Mapa_Clientes_Sodexo_18042024_matheus_silvano (inserir data do dia)
+vi Mapa_Clientes_Sodexo
+
 ## Shell Script ##
 
 - É uma sequência lógica de comandos e instruções no Shell
