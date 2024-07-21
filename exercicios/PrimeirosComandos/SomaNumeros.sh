@@ -1,6 +1,6 @@
 ###########################################################################
 #                                                                                    
-# exercicio1.sh                                                                     
+# SomaNumeros.sh                                                                     
 #                                                                                    
 # Autor: Matheus Silvano (matheussilvano2005@gmail.com)                              
 # Data Criação: 14/07/2024                                                           
@@ -8,7 +8,7 @@
 # Descrição: Crie um Script que após executado solicite dois valores como entrada,   
 # esses valores devem ser somados e o resultado exibido para o usuário.              
 #                                                                                    
-# Exemplo de uso: ./exercicio1.sh                                                     
+# Exemplo de uso: ./SomaNumeros.sh                                                     
 #                                                                                    
 ######################################################################################
 
