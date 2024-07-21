@@ -386,6 +386,95 @@ OBS: echo $0 mostra o shell utilizado
     - $* -> Todos os parâmetros inseridos
     - $1-9 -> Cada um dos parâmetros
     - Exemplo de uso: ./scrit.sh teste (executaria o script com o parâmetro teste)
+
+- Instruções condicionais 
+    
+  ## If ##
+
+        if <comando-condicao>
+        then
+            comando1
+            comando2
+        fi
+    
+    
+        if <comando-condicao>
+        then
+            comando1
+        else
+            comando2
+        fi
+    
+    
+        if <comando-condicao>
+        then
+            comando1
+        elif <comando-condicao>
+        then
+            comando2
+        else
+            comando3
+        fi
+    
+        - No if do shell, não se usa uma condição, mas sim um comando
+        - pode-se usar o comando test para validar se uma expressão está correta (0=correta)
+        - Para testar valores numéricos, pode-se usar:
+            -eq -> igual (equal)
+            -ne -> diferente (not equal)
+            -gt -> maior que (greater than)
+            -ge -> maior ou igual (greater equal)
+            -lt -> menor que (lower than)
+            -le -> menor ou igual (lower equal)
+
+        - Para testar strings, pode-se usar:
+            = -> uma string igual a outra
+            != -> uma string diferente da outra
+            -n -> string não nula
+            -z -> string nula
+
+        - Para testar arquivos, pode-se usar:
+            -f -> É um arquivo
+            -d -> É um diretório
+            -r -> Tem permissão de leitura
+            -w -> Tem permissão de escrita
+            -x -> Tem permissão de execussão
+            -s -> Possui tamanho maior que 0
+
+        - Exemplos:
+            test 50 -gt 100 -> retorno > 0 (falso)
+            test -f /tmp/teste -> caso o arquivo exista retorno = 0 (verdadeiro)
+            também pode ser usado: [50 -gt 100]
+            
+            if ["$VAR1" -gt 10]
+            then
+                echo sucesso
+            fi
+
+        - após o if, pode-se usar um ! para afirmar negação
+            if [!"$VAR1" -gt 10] # se VAR1 não for igual a 10
+            then
+                echo sucesso
+            fi
+
+        - Pode-se usar o -a (and) para validar mais de uma variável ao mesmo tempo
+            if ["$VAR1" -gt 10 -a "$VAR1" -lt 20] 
+            then
+                echo sucesso
+            fi
+
+        - Para validar uma variável ou outra, pode-se usar -o (or)
+            if ["$VAR1" -gt 10 -o "$VAR1" -eq 5] 
+            then
+                echo sucesso
+            fi
+
+
+
+        
+        
+            
+    
+        
     
     
     
