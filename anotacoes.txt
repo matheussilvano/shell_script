@@ -468,6 +468,31 @@ OBS: echo $0 mostra o shell utilizado
                 echo sucesso
             fi
 
+  ## Case ##
+        - É usado quando um valor possui vários padrões possíveis (com o objetivo de não fazer vários ifs)
+            case $valor in
+                padrao1)
+                    comando
+                    ;;
+                padrao2)
+                    ;;
+                *)            # funciona como um else
+                    comando
+                    ;;
+            esac
+
+        - É muito utilizado para menus:
+            case $OPCAO_DO_USUARIO in
+                1)
+                    echo "Incluir"
+                    ;;
+                2)
+                    echo "Remover"
+                    ;;
+                *)
+                    echo "Opção inválida"
+                    ;;
+            esac
 
 
         
