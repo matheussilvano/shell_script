@@ -494,6 +494,50 @@ OBS: echo $0 mostra o shell utilizado
                     ;;
             esac
 
+- Instruções de loops
+    - São utilizadas para executar uma série de comandos em ciclos
+    - For, While e Until
+
+  ## For ##
+
+        for variavel in valor1 valor2
+        do
+            comando1
+            comando2
+        done
+
+    ==========================================================
+
+        for numero in 1 2 3 4 5
+        do
+            echo "O número atual é $numero"
+        done
+
+    ==========================================================
+
+        for arquivo in alunos*
+        do
+            echo "$arquivo"
+        done
+
+    ==========================================================
+
+        for sequencia in $(seq 5 10)
+        do
+            echo "$sequencia"
+        done
+
+    ==========================================================
+
+        for (( i=5 ; -<=20 ; i++ ))
+        do
+            echo "$i"
+        done
+
+
+
+
+
 
         
         
