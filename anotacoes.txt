@@ -534,6 +534,107 @@ OBS: echo $0 mostra o shell utilizado
             echo "$i"
         done
 
+     - IFS (Internal Field Separator)
+        - set|grep IFS para visualizar
+        - Por padrão o IFS é: espaço, tab ou quebra de linha
+        - Para alterar o IFS:
+            - Criar um backup: OLDIFS=$IFS
+            - Alerar o IFS para o que desejar: IFS=seoarador_desejado
+
+  ## While ##
+    - Executa um comando enquanto algo for verdadeiro
+        
+        while comando-condicao
+        do
+            comando1
+        done
+
+  ## Until ##
+    - Faz um comando até que algo seja verdadeiro (enquanto for falso)
+
+        until comando-condicao
+        do
+            comando1
+        done
+
+  ## Break ##
+    - Força a saída de um loop
+
+  ## Continue ##
+    - Reinicia o loop, sem executar o que está abaixo
+
+- Funcões
+    - É um trecho de código que exerce uma rotina específica dentro do script
+    - Evita a repetição excessiva em um código
+    - Reduz o tamanho do script
+    - Facilita a manutenção
+
+    function nome-funcao (){
+        comando
+    }
+
+    para chamar a função: nome-funcao, ou atribuir a uma variável
+
+- Criando logs
+
+  ## Redirecionamento ##
+    ./script.sh >> log.out 2>> log_erro.out -> (não aparece saída na tela)
+    - Para jogar a saída na tela, pode-se usar: ~/script.sh | tee -a log.out
+    - Dentro de um script, pode-se criar a variável $LOG e direcionar informações como data diretamente para o log, facilitando a visualização.
+    Por exemplo: echo "$(date) - Iniciando o Script..." >> $LOG
+                 ...
+                 echo "$(date) - Finalizando o Script..." >> $LOG   
+
+    - Também dentro do script, para mover tudo para o log, pode-se usar:
+        exec 1>> $LOG
+        exec 2>&1
+
+  ## Rsyslog ##
+    cd /etc/rsyslog.d/
+    vi 50-default.conf
+    - Possui os logs padrões do ambiente
+
+- Enviar e-mails
+    - comando: mail
+    - sudo apt-get install bsd-mailx
+    mail -s "Assunto" email@dominio.com < arquivo_com_conteudo.txt
+    - Também pode-se direcionar após um comando
+        echo "texto" | mail -s "assunto" email@dominio.com
+
+- Debug
+
+  ## Erros de sitaxe ##
+    - Após tentar executar o comando, normalmente o erro já é mostrado
+    bash -n script.sh -> testa, mostra os erros, mas não executa o script
+
+  ## Erros de lógica ##
+    - É interessante usar echos durante o script para ver aonde o código está travando
+    bash -x -> adiciona um sinal de + em todos os comandos executados
+    bash -v -> mostra os comandos executados por blocos, com seus resultados
+    Pode ser usado bash -xv, que soma os dois
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+
+  
+
+    
+
+
+
+
+            
+
 
 
 
