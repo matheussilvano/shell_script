@@ -1,5 +1,8 @@
 ## Para a Nexxera ##
 
+Quebra lote EE:
+for i in ~/DEMO.SILVANO/mailbox/EXT_341_99059_* ; do ${TRADUTOR_CMD} /home/skyline/scripts/tradutor/bc/nexgenerico/QuebraLote.bc $i $i.saida@@ ; done
+
 Traduz/Importa EE:
 for i in ~/SOFTWORKS.33796373000170/mailbox/EXT_341_99059* ; do /home/skyline/scripts/bankweb/Importador_Extrato_Generico.sh.run $i ; done
 
