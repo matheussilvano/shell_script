@@ -49,7 +49,7 @@ done;
 
 Procura CNPJ em arquivo:
 - Layout SE
-sed -n 's/.*CV0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/*VR_NXX_CORCOVADOBURGER* | uniq
+sed -n 's/.*CV0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/*VR_NXX_MAIADEMAUA* | uniq
 
 - Layout Safrapay
 sed -n 's/.*RO0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/*EMPGRAN1* | uniq
