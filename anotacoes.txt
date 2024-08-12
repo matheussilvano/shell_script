@@ -40,7 +40,7 @@ Pesquisa em todas as caixas postais:
 find ~/OPERADORAS.SEMRELACIONAMENTO/sent ~/.QUARENTENA/mailbox ~/CIELO.SEMPV/sent ~/ALELO.SEMPV/sent ~/POLICARD.SEMRELACIONAMENTO ~/TICKET.SEMRELACIONAMENTO -type f -name '*MMBCOMER*' -exec ls -ltr {} \;
 
 Liberação de arquivos em massa:
-for cnpj in 2888720757 2886159497; do
+for cnpj in 1017677490 1077589201​ 1118410480; do
     for i in ~/CIELO.SEMPV/sent/*$cnpj*; do
         mv -v $i /var/spool/nexxera/skyline/recebe/ident/$(basename $i | cut -f1 -d\$);
        sleep 1;
@@ -49,7 +49,7 @@ done;
 
 Procura CNPJ em arquivo:
 - Layout SE
-sed -n 's/.*CV0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/*VR_NXX_MAIADEMAUA* | uniq
+sed -n 's/.*CV0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/*biq_0006031* | uniq
 
 - Layout Safrapay
 sed -n 's/.*RO0\([0-9]\{14\}\).*/\1/p' ~/.QUARENTENA/mailbox/*EMPGRAN1* | uniq
